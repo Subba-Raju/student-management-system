@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- ============================================
-     FILE: WebContent/WEB-INF/web.xml
-     PURPOSE: Tells Tomcat about your app
-              and maps URLs to Servlets
-     ============================================ -->
 
 <web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
