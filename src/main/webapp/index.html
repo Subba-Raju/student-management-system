@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar">
+    <div class="nav-brand">🎓 Student Management System</div>
+    <div class="nav-links">
+      <a href="index.html" class="active">All Students</a>
+      <a href="add-student.html">+ Add Student</a>
+    </div>
+  </nav>
+
+  <!-- ── MAIN CONTENT ── -->
+  <div class="container">
+
+    <!-- Page Title + Search -->
+    <div class="page-header">
+      <h2>Student Records</h2>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="🔍 Search by name or course..." />
+      </div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <span class="stat-number" id="totalCount">5</span>
+        <span class="stat-label">Total Students</span>
+      </div>
+      <div class="stat-card green">
+        <span class="stat-number" id="topCount">2</span>
+        <span class="stat-label">Above 90%</span>
+      </div>
+      <div class="stat-card orange">
+        <span class="stat-number" id="avgMarks">84.1</span>
+        <span class="stat-label">Average Marks</span>
+      </div>
+    </div>
+
+    <!-- Student Table -->
+    <div class="table-wrapper">
+      <table id="studentTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Course</th>
+            <th>Marks</th>
+            <th>Grade</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Rows injected by Java Servlet OR sample rows below for preview -->
+          <tr>
+            <td>1</td>
+            <td>Ravi Kumar</td>
+            <td>ravi@example.com</td>
+            <td>9876543210</td>
+            <td>B.Tech CSE</td>
+            <td>85.50</td>
+            <td><span class="badge b">B</span></td>
+            <td class="actions">
+              <a href="edit-student.html?id=1" class="btn-edit">Edit</a>
+              <a href="DeleteServlet?id=1"
+                 onclick="return confirm('Delete this student?')"
+                 class="btn-delete">Delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Priya Sharma</td>
+            <td>priya@example.com</td>
+            <td>9876543211</td>
+            <td>B.Tech ECE</td>
+            <td>91.00</td>
+            <td><span class="badge a">A</span></td>
+            <td class="actions">
+              <a href="edit-student.html?id=2" class="btn-edit">Edit</a>
+              <a href="DeleteServlet?id=2"
+                 onclick="return confirm('Delete this student?')"
+                 class="btn-delete">Delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Arjun Reddy</td>
+            <td>arjun@example.com</td>
+            <td>9876543212</td>
+            <td>B.Tech MECH</td>
+            <td>76.75</td>
+            <td><span class="badge c">C</span></td>
+            <td class="actions">
+              <a href="edit-student.html?id=3" class="btn-edit">Edit</a>
+              <a href="DeleteServlet?id=3"
+                 onclick="return confirm('Delete this student?')"
+                 class="btn-delete">Delete</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div><!-- /container -->
+
+  <script>
+    // Live search filter
+    document.getElementById('searchInput').addEventListener('keyup', function () {
+      const keyword = this.value.toLowerCase();
+      const rows    = document.querySelectorAll('#tableBody tr');
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(keyword) ? '' : 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>
