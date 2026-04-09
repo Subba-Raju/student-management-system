@@ -1,10 +1,3 @@
-// ============================================
-//  FILE: src/com/sms/StudentDAO.java
-//  PURPOSE: All database operations
-//           DAO = Data Access Object
-//           (Add, View, Edit, Delete students)
-// ============================================
-
 package com.sms;
 
 import java.sql.*;
