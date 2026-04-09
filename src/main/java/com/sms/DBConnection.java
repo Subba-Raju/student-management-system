@@ -1,18 +1,4 @@
-// ============================================
-//  DBConnection.java — ORACLE DATABASE
-//  Use this in ALL your projects:
-//  Project 1, 6, 7A, 7B, 7C
-//
-//  Just change the schema/table names
-//  per project — connection stays the same
-// ============================================
-
-package com.sms; // ← Change package per project:
-                 //   com.sms   → Project 1
-                 //   com.auth  → Project 6
-                 //   com.todo  → Project 7A
-                 //   com.cricket → Project 7B
-                 //   com.quiz  → Project 7C
+package com.sms; 
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -22,8 +8,8 @@ public class DBConnection {
 
     // ── Oracle Connection Settings ────────────
     private static final String URL      = "jdbc:oracle:thin:@localhost:1521:ORCLDB";
-    private static final String USERNAME = "advjava";
-    private static final String PASSWORD = "subba";
+    private static final String USERNAME = "USERNAME";
+    private static final String PASSWORD = "PASSWORD";
 
     public static Connection getConnection() {
         Connection conn = null;
