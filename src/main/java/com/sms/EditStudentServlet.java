@@ -1,9 +1,3 @@
-// ============================================
-//  FILE: src/com/sms/EditStudentServlet.java
-//  PURPOSE: GET  → loads student into edit form
-//           POST → saves updated data to DB
-// ============================================
-
 package com.sms;
 
 import java.io.IOException;
