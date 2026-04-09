@@ -1,10 +1,3 @@
-// ============================================
-//  FILE: src/com/sms/ListStudentServlet.java
-//  PURPOSE: Fetches all students from DB and
-//           dynamically renders the table in
-//           index.html
-// ============================================
-
 package com.sms;
 
 import java.io.IOException;
