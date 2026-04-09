@@ -1,9 +1,3 @@
-// ============================================
-//  FILE: src/com/sms/DeleteStudentServlet.java
-//  PURPOSE: Deletes a student from the DB
-//           when Delete button is clicked
-// ============================================
-
 package com.sms;
 
 import java.io.IOException;
