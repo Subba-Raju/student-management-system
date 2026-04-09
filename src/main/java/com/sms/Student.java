@@ -1,9 +1,3 @@
-// ============================================
-//  FILE: src/com/sms/Student.java
-//  PURPOSE: Represents one student record
-//           (This is called a "Model" class)
-// ============================================
-
 package com.sms;
 
 public class Student {
