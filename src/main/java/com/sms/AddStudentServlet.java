@@ -1,9 +1,3 @@
-// ============================================
-//  FILE: src/com/sms/AddStudentServlet.java
-//  PURPOSE: Receives form data from
-//           add-student.html and saves to DB
-// ============================================
-
 package com.sms;
 
 import java.io.IOException;
