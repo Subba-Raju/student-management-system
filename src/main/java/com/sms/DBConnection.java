@@ -8,8 +8,8 @@ public class DBConnection {
 
     // ── Oracle Connection Settings ────────────
     private static final String URL      = "jdbc:oracle:thin:@localhost:1521:ORCLDB";
-    private static final String USERNAME = "USERNAME";
-    private static final String PASSWORD = "PASSWORD";
+    private static final String USERNAME = "advjava";
+    private static final String PASSWORD = "subba";
 
     public static Connection getConnection() {
         Connection conn = null;
