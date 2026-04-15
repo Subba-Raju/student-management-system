@@ -115,8 +115,8 @@ Open `src/main/java/com/sms/DBConnection.java` and update:
 
 ```java
 private static final String URL      = "jdbc:oracle:thin:@localhost:1521:ORCLDB";
-private static final String USERNAME = "your_username";
-private static final String PASSWORD = "your_password";
+private static final String USERNAME = "advjava";
+private static final String PASSWORD = "subba";
 ```
 
 ---
